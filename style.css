@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@300;900&family=Poppins:wght@300;900&family=Urbanist:wght@100;200;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;500;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+
+}
+html{
+font-size: 62,.5%;
+/*1 rem =10px*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+p,
+li,
+a{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color:rgb(49, 54, 62);
+    line-height: 1.5rem;
+}
+
+a{
+   text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+
+/* reusable */
+.btn{
+    padding: 1.2rem 3.2rem;
+    background-color: #0062ff;
+    display: inline-block;
+    color: white;
+    border-radius: 0.6rem;
+}
+
+.section-common-heading{
+    font-size: 1.7rem;
+    font-weight: 510;
+    text-transform: capitalize;
+}
+.section-common-subheading{
+    color:rgb(49, 54, 62);
+}
+
+.section-common--title{
+    font-size: 1.3rem;
+    margin: 2.1rem 0 1.1rem 0;
+}
+
+/*state */
+.btn:hover{
+    background-color: #003b99;
+    cursor: pointer;
+    box-shadow:rgba(100,100,111,0.2) 0px 7px 29px 0px ;
+}
+/*grid section*/
+.grid{
+    display: grid;
+}
+.grid-two--cols{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-three--cols{
+    grid-template-columns: repeat(3,1fr);
+}
+
+/*navbar*/
+.container{
+    max-width:80rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+}
+.section-navbar {
+    width: 100%;
+    box-shadow:rgba(0,0,0,0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px ;
+}
+.section-navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+.section-navbar .navbar ul{
+    display: flex;
+    gap: 2.2rem;
+
+    & li a{
+        color: var(--heading-color);
+        text-transform: uppercase;
+        font-weight:800;
+        font-size: 1rem;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content:"";
+            position: absolute;
+            top: 1.2rem;
+            left: 0;
+            width:0;
+            border-bottom: 0.2rem solid rgb(29, 125, 250);
+            transition: all 0.3s linear;
+
+        }
+      
+    }
+    & li a:hover:after {
+        width: 100%;
+    }
+}
+
+/*main*/
+main{
+    position: relative;
+    height: 38rem;
+    background-image: linear-gradient(to top right,#3d86fa,#4484fb,#679eff,#b3d2ff,#ebf3fe);
+}
+/*devider */
+.custom-shape-divider-bottom-1707578500 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1707578500 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1707578500 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.section-hero--image img{
+   width: 100%;
+   height: auto;
+   margin-top: -150px;
+  
+}
+
+.section-hero .grid{
+    top: 20px;
+    align-items: center;
+    gap: 6.5rem;
+
+    & .hero-subheading{
+        margin-top: -130px;
+        text-transform: uppercase;
+        letter-spacing:1px;
+        font-size: 1.5rem;
+        word-spacing: 0.1rem;
+        color: #003b99;
+        font-weight: 600;
+    }
+    & .hero-heading{
+        font-family: "jost";
+        line-height: 1.5;
+        font-weight: 700;
+        font-size: 2.8rem;
+        color: #003b99;
+    }
+    & .hero-para{
+        color: white;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+/* about Section */
+.section-about{
+    margin-top: -80px;
+    height: 41rem;
+   
+}
+.section-about .grid{
+    gap: 6.5rem;
+}
+.section-about .about-div{
+    text-align: center;
+    margin-top: -180px;
+}
+.section-about img{
+    padding: 0.5rem;
+    background-color: rgb(230, 240, 247);
+    width: 5rem;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+.icon:hover img{
+  transform: rotate(360deg);
+    background: linear-gradient(to right,#0575e6,#021b79);
+}
+
